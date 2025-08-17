@@ -1,0 +1,36 @@
+// Java Program to perform Matrix Subtraction
+import java.util.Scanner;
+
+public class Program118 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter rows and columns of matrices: ");
+        int r = sc.nextInt();
+        int c = sc.nextInt();
+
+        int[][] A = new int[r][c];
+        int[][] B = new int[r][c];
+        int[][] diff = new int[r][c];
+
+        System.out.println("Enter elements of Matrix A:");
+        for (int i = 0; i < r; i++)
+            for (int j = 0; j < c; j++)
+                A[i][j] = sc.nextInt();
+
+        System.out.println("Enter elements of Matrix B:");
+        for (int i = 0; i < r; i++)
+            for (int j = 0; j < c; j++)
+                B[i][j] = sc.nextInt();
+
+        // Subtract matrices
+        System.out.println("Result of Matrix Subtraction:");
+        for (int i = 0; i < r; i++) {
+            for (int j = 0; j < c; j++) {
+                diff[i][j] = A[i][j] - B[i][j];
+                System.out.print(diff[i][j] + " ");
+            }
+            System.out.println();
+        }
+        sc.close();
+    }
+}
